@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<modemanual>NO</modemanual>
+
+<frame_planning>
+
+ <frame>  
+  <address>http://www.simpletest4.info/images2/spicecam1.jpg</address>
+  <time_in>20120407140000</time_in>
+  <time_out>20120407141500</time_out>
+  <options>
+      <refresh_time>1000</refresh_time>
+	  <img_effect>oil_2_128</img_effect>
+	  <cut_x></cut_x>
+	  <cut_x></cut_x>
+	  <cut_width></cut_width>
+	  <cut_height></cut_height>
+  </options>
+  <ismanual>YES</ismanual>
+ </frame>
+    
+ <frame>  
+  <address>http://www.simpletest4.info/images2/spicecam1.jpg</address>
+  <time_in>20120407140000</time_in>
+  <time_out>20120407141500</time_out>
+  <options>
+      <refresh_time>1000</refresh_time>
+	  <img_effect>oil_2_128</img_effect>
+	  <cut_x></cut_x>
+	  <cut_x></cut_x>
+	  <cut_width></cut_width>
+	  <cut_height></cut_height>
+  </options>
+  <ismanual>NO</ismanual>
+ </frame>     
+  
+</frame_planning>
