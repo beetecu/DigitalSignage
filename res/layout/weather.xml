@@ -1,0 +1,477 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    tools:context=".WeatherActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/screen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:background="#000000"
+            android:visibility="gone"
+            >
+            
+
+            <TextView
+                android:id="@+id/fullscreen_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:freezesText="true"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Esta pantalla es interactiva. Conectese a esta pantalla desde su movil y obtenga informacion extra de los contenidos. Reserve automaticamente las oferta que se muestran. Comparta, opine y gane premios"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+            
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@+id/fullscreen_content"  >
+            
+            
+            
+                <ImageView
+        android:id="@+id/imageadTop"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_snow" />
+
+    <RelativeLayout
+        android:layout_width="689dp"
+        android:layout_height="270dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:background="#af2d3772" >
+
+        <EditText
+            android:id="@+id/tcondicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:background="#ff2d3772"
+            android:ems="10"
+            android:gravity="left"
+            android:text="Madrid"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:editable="false"
+            android:typeface="normal" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/icurrent"
+            android:layout_width="360dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tcondicion"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/clear" />
+
+        <EditText
+            android:id="@+id/textCurrentTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/icurrent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_toRightOf="@+id/icurrent"
+            android:background="#ff2d3772"
+            android:ems="10"
+            android:gravity="center"
+            android:text="-23º"
+            android:textColor="#ffffff"
+            android:textSize="98dp"
+            android:textStyle="bold"
+            android:editable="false"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/tcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/icurrent"
+            android:layout_alignLeft="@+id/textCurrentTemp"
+            android:layout_below="@+id/textCurrentTemp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#ff2d3772"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Boadilla del Monte "
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:editable="false"
+            android:typeface="normal" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="918dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="21dp" >
+
+        <RelativeLayout
+            android:id="@+id/fday1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="#df2d3772" >
+
+            <EditText
+                android:id="@+id/tday1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#ff1d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="DOMINGO"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday1min"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tday1"
+                android:layout_marginTop="3dp"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="-23º"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday1max"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:text="-8"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iday1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tday1max"
+                android:layout_below="@+id/tday1min"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/clear" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fday2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fday1"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/fday1"
+            android:background="#df2d3772"
+            android:editable="false" >
+
+            <EditText
+                android:id="@+id/tday2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#ff1d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="LUNES"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday2min"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tday2"
+                android:layout_marginTop="3dp"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="-23º"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday2max"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:text="-8"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iday2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tday2max"
+                android:layout_below="@+id/tday2min"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/clear" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fday3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fday2"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/fday2"
+            android:background="#df2d3772" >
+
+            <EditText
+                android:id="@+id/tday3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#ff1d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="LUNES"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday3min"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tday3"
+                android:layout_marginTop="3dp"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="-23º"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday3max"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:text="-8"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iday3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tday3max"
+                android:layout_below="@+id/tday3min"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/clear" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fday4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fday1"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/fday3"
+            android:background="#df2d3772" >
+
+            <EditText
+                android:id="@+id/tday4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#ff1d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="LUNES"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday4min"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tday4"
+                android:layout_marginTop="3dp"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:inputType="text"
+                android:text="-23º"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tday4max"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#002d3772"
+                android:editable="false"
+                android:gravity="center"
+                android:text="-8"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iday4"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tday4max"
+                android:layout_below="@+id/tday4min"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/clear" />
+        </RelativeLayout>
+        
+                          
+    </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    
+            
+
+        </RelativeLayout>
+        
+
+
+    </FrameLayout>
+    
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+</FrameLayout>

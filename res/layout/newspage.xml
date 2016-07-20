@@ -1,0 +1,179 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".RssActivity_old" >
+
+    <RelativeLayout
+        android:id="@+id/relview"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff" >
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#528ecf"
+            android:gravity="center_vertical"
+            android:height="250dp"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:editable="false"
+            android:text=" EL CONFIDENCIAL"
+            android:textAlignment="gravity"
+            android:textColor="#ffffff"
+            android:textSize="90dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+        
+                <EditText
+                    android:id="@+id/fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/title"
+                    android:layout_alignRight="@+id/editText3"
+                    android:layout_below="@+id/title"
+                    android:background="#ffffff"
+                    android:ems="10"
+                    android:paddingLeft="15dip"
+                	android:paddingRight="15dip"
+                    android:gravity="center_vertical|right"
+                    android:text="25 de Junio de 2013"
+                    android:textColor="#000000"
+                    android:textSize="45dp"
+                    android:editable="false"
+                    android:typeface="monospace" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignLeft="@+id/iTitle"
+            android:layout_alignRight="@+id/title"
+            android:layout_below="@+id/fecha"
+            android:background="#9f9f9f"
+            android:editable="false"
+            android:ems="10" />
+
+        <EditText
+            android:id="@+id/iTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="#5a5a5a"
+            android:clickable="false"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="1dp"
+            android:maxLines="4"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="false"
+            android:text=" EL CONFIDENCIAL EL CONFIDENCIAL aaaaaaaaaaaaaaa"
+            android:textColor="#ffffff"
+            android:textColorLink="#000000"
+            android:textSize="70dp"
+            android:editable="false"
+            android:textStyle="bold"
+            android:typeface="sans" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/iDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText6"
+            android:layout_alignLeft="@+id/editText6"
+            android:layout_alignRight="@+id/editText6"
+            android:layout_below="@+id/iImage"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:ems="10"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:enabled="false"
+            android:fitsSystemWindows="true"
+            android:gravity="center_vertical|top"
+            android:includeFontPadding="false"
+            android:longClickable="false"
+            android:scrollHorizontally="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:selectAllOnFocus="false"
+            android:text="kl"
+            android:editable="false"
+            android:textColor="#000000"
+            android:textSize="45dp"
+            android:typeface="sans" />
+        
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_above="@+id/infoExtra"
+            android:layout_alignLeft="@+id/iTitle"
+            android:layout_alignRight="@+id/title"
+            android:layout_marginBottom="5dp"
+            android:background="#9f9f9f"
+            android:editable="false"
+            android:ems="10"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/infoExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText6"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/editText6"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"
+            android:clickable="false"
+            android:ems="10"
+            android:enabled="false"
+            android:includeFontPadding="false"
+            android:longClickable="false"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="false"
+            android:textSize="45dp"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="Portada"
+            android:textColor="#ffffff"
+            android:textColorLink="#ffffff"
+            android:textStyle="italic"
+            android:editable="false"
+            android:typeface="monospace" />
+
+        <ImageView
+            android:id="@+id/iImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignLeft="@+id/iDescription"
+            android:layout_alignRight="@+id/iDescription"
+            android:layout_below="@+id/iTitle"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+             />
+
+    </RelativeLayout>
+     
+</FrameLayout>
